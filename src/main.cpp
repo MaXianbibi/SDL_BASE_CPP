@@ -6,11 +6,11 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 21:48:56 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/04/20 00:35:16 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/04/20 01:08:23 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/BSDL.hpp"
+#include "../include/Win.hpp"
 
 int doingnothing(Win &win)
 {
@@ -23,8 +23,8 @@ int doingnothing(Win &win)
 int main ( void )
 {
     Win win(720, 480, "BSDL");
-    win.updateFunc = doingnothing;
     
+    win.updateFunc = doingnothing;
     win.loop();
     
 }

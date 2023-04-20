@@ -6,11 +6,11 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 23:28:38 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/04/20 00:32:42 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/04/20 01:01:44 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/BSDL.hpp"
+#include "../../include/Win.hpp"
 
 void Win::drawPixel(u_int32_t y, u_int32_t x, u_int32_t color)
 {

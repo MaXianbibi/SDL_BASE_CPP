@@ -6,14 +6,22 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 21:51:35 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/04/20 00:33:07 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/04/20 01:02:36 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WIN_HPP
 # define WIN_HPP
 
-#include "BSDL.hpp"
+# include <SDL2/SDL.h>
+#include    <iostream>
+
+# define DEFAULT_HEIGHT  1080  
+# define DEFAULT_WIDTH   1920 
+# define DEFAULT_NAME    "Window"
+
+void fatal(std::string msg);
+void fatal_SDL(std::string msg);
 
 class Win
 {
@@ -26,14 +34,10 @@ private:
     u_int16_t       w;
     u_int16_t       h;
     u_int8_t        FRAME_RATE;
-
     bool            is_running;
     void            (Win::*defaultEventFunction)(void);
     void            render(void);
     void            defaultEvent(void);
-
-    
-    
 public:
     Win();
     Win(u_int16_t _w, u_int16_t _h, std::string name);
@@ -48,7 +52,4 @@ public:
     void           draw_grid(void);
     void           drawRecrangle(u_int32_t posX, u_int32_t posY, u_int32_t w, u_int32_t h, u_int32_t color);
 };
-
-
-
 #endif

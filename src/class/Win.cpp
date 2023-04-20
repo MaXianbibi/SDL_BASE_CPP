@@ -6,17 +6,17 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 21:52:58 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/04/20 00:21:32 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/04/20 01:06:51 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/BSDL.hpp"
+#include "../../include/Win.hpp"
 
 Win::Win(u_int16_t _w, u_int16_t _h, std::string name) : w(_w), h(_h)
 {
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
         fatal_SDL("SDL_INIT");
-    SDL_DisplayMode display_mode = {0};
+    SDL_DisplayMode display_mode;
     if (SDL_GetCurrentDisplayMode(0, &display_mode) < 0)
         fatal_SDL("SDL_GetCurrentDisplayMode");
     this->win = SDL_CreateWindow(name.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, this->w, this->h, SDL_WINDOW_SHOWN);
