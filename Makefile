@@ -1,7 +1,7 @@
 NAME = BSDL
-CC = g++ -std=c++20
+CC = g++ -std=c++17
 CFLAGS = -Wall -Wextra -Werror
-LDFLAGS = -lSDL2
+LDFLAGS = -Llib/SDL/lib -lSDL2 -lm
 RM = rm -f
 
 SRC_DIR = src/

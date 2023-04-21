@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Win.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
+/*   By: jmorneau <jmorneau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 21:51:35 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/04/20 21:32:30 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/04/20 21:50:11 by jmorneau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WIN_HPP
 # define WIN_HPP
 
-# include <SDL2/SDL.h>
+# include "../lib/SDL/include/SDL.h"
 #include    <iostream>
 
 # define DEFAULT_HEIGHT  1080  
