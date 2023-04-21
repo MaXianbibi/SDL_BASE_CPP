@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 21:52:58 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/04/20 01:06:51 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/04/20 21:33:01 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void Win::defaultEvent(void)
     }
 }
 
-void Win::loop(void)
+void Win::loop(void *ptr)
 {
     while (this->is_running)
     {
@@ -87,7 +87,7 @@ void Win::loop(void)
         (this->*defaultEventFunction)();
         if (eventsFunc)
             (this->eventsFunc)(*this);
-        (this->updateFunc)(*this);
+        (this->updateFunc)(*this, ptr);
 
         render();        
         SDL_Delay(this->FRAME_RATE);

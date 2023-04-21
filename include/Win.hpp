@@ -6,7 +6,7 @@
 /*   By: justinmorneau <justinmorneau@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 21:51:35 by justinmorne       #+#    #+#             */
-/*   Updated: 2023/04/20 21:28:58 by justinmorne      ###   ########.fr       */
+/*   Updated: 2023/04/20 21:32:30 by justinmorne      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ public:
     Win(u_int16_t _w, u_int16_t _h, std::string name);
     ~Win();
     int            (*eventsFunc)(Win &win);
-    int            (*updateFunc)(Win &win);
-    void           loop(void);
+    int            (*updateFunc)(Win &win, void *ptr);
+    void           loop(void *ptr);
     void           change_frame_rate(u_int8_t v);
     void           stop_running(void); 
     void           drawPixel(u_int32_t y, u_int32_t x, u_int32_t color);
